@@ -16,7 +16,13 @@ namespace Kolokwium_PJ
         {
 
         }
-
+        
+        //<summary>Search first fish moving upstream.</summary>
+        //<param name = "A">Sizes of the fish</param>
+        //<param name = "B">Directions of the fish</param>
+        //<param name = "actually"> actually first up stream fish</param>
+        //method returns int actually which is position of actually first up stream fish 
+        
         public static int FirstUpStream(int[] A, int[] B, int actually)
         {
             for (int i = 0; i < A.Length; i++)
