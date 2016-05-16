@@ -14,14 +14,47 @@ namespace Kolokwium_PJ
 
         static void Main(string[] args)
         {
+
         }
+
         public static int FirstUpStream(int[] A, int[] B, int actually)
         {
-
+            for (int i = 0; i < A.Length; i++)
+            {
+                if (B[i] == 1)
+                {
+                    actually = i;
+                    break;
+                }
+            }
             return actually;
         }
+
         public static void AliveFish(int[] A, int[] B)
         {
+            int actually = 0;
+            actually = FirstUpStream(A, B, actually);
+            for (int i = 0; i < A.Length; i++)
+            {
+                while (i < actually)
+                {
+                    AA.Add(A[i]);
+                    BB.Add(B[i]);
+                    i++;
+                }
+
+                if (B[actually] != B[i])
+                {
+                    if (A[actually] < A[i])
+                    {
+                        actually = i;
+                    }
+
+                }
+
+            }
+            AA.Add(A[actually]);
+            BB.Add(B[actually]);
 
         }
     }
